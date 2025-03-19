@@ -92,6 +92,14 @@ void ADFMediaPlayer::control(const media_player::MediaPlayerCall &call) {
         unmute_();
         break;
       }
+      case media_player::MEDIA_PLAYER_COMMAND_ENQUEUE:
+        break;
+      case media_player::MEDIA_PLAYER_COMMAND_REPEAT_ONE:
+        break;
+      case media_player::MEDIA_PLAYER_COMMAND_REPEAT_OFF:
+        break;
+      case media_player::MEDIA_PLAYER_COMMAND_CLEAR_PLAYLIST:
+        break;
     }
   }
 }
