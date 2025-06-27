@@ -3,8 +3,8 @@
 #include "esphome/core/defines.h"
 #ifdef USE_ESP32
 
-#include <driver/i2s_std.h>
-#include <driver/i2s_pdm.h>
+#include <driver/i2s.h>
+
 #include "esphome/core/component.h"
 #include "esphome/core/helpers.h"
 
