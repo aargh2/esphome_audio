@@ -12,7 +12,7 @@ static const char *const TAG = "i2s_audio";
 void I2SAudioComponent::setup() {
   static i2s_port_t next_port_num = I2S_NUM_0;
 
-  if (next_port_num >= I2S_NUM_MAX) {
+  if (next_port_num >= I2S_NUM_1) {
     ESP_LOGE(TAG, "Too many I2S Audio components!");
     this->mark_failed();
     return;
@@ -163,7 +163,7 @@ i2s_driver_config_t I2SSettings::get_i2s_cfg() const {
       .use_apll = false,
       .tx_desc_auto_clear = true,
       .fixed_mclk = I2S_PIN_NO_CHANGE,
-      .mclk_multiple = I2S_MCLK_MULTIPLE_DEFAULT,
+      .mclk_multiple = I2S_MCLK_MULTIPLE_768,
       .bits_per_chan = I2S_BITS_PER_CHAN_DEFAULT,
 #if SOC_I2S_SUPPORTS_TDM
       .chan_mask = I2S_CHANNEL_MONO,
